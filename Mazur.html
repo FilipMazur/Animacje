@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {margin: 0;}
+        @keyframes polozenie_rozmiar {
+            from {transform: translate(0, 0) scale(1);}
+            to {transform: translate(80vw, 50px) scale(0.5);}
+        }
+        .polozenie_rozmiar {position: absolute; animation-name: polozenie_rozmiar; animation-duration: 4s; width: 10%; height: 10%;}
+        @keyframes cechy_fizyczne {
+            from {background-color: blueviolet; border: 3px groove tomato; box-shadow: 5px 0 15px;}
+            to {background-color: darkorange; border: 6px initial firebrick; box-shadow: 0 0 34px 2px;}
+        }
+        .cechy_fizyczne {animation-name: cechy_fizyczne; animation-duration: 4s; width: 100px; height: 100px; background-color: crimson;}
+        @keyframes ksztalt_obrot {
+            0% {transform: rotate(-37deg); border-radius: 0;}
+            70% {transform: rotate(42deg); border-radius: 100%;}
+            100% {transform: rotate(24deg); border-radius: 10%;}
+        }
+        .ksztalt_obrot {animation-name: ksztalt_obrot; animation-duration: 4s; width: 100px; height: 100px; background-color: darkslateblue;}
+        @keyframes najechanie_myszka {
+            0% {border-radius: 0%; background-color: chartreuse;}
+            37% {border-radius: 58%; background-color: dodgerblue;}
+            73% {border-radius: 100%; background-color: greenyellow;}
+            100% {border-radius: 37%; background-color: darkred;}
+        }
+        .najechanie_myszka {width: 100px; height: 100px; background-color: darkviolet; transition: background-color 0.3s ease;}
+        .najechanie_myszka:hover {animation-name: najechanie_myszka; animation-duration: 7s;}
+    </style>
+</head>
+<body>
+    <img class="polozenie_rozmiar" src="Obrazy/ptak.png" alt="Ptak"><br><br><br><br><br>
+    <div class="cechy_fizyczne"></div><br>
+    <div class="ksztalt_obrot"></div><br><br>
+    <h1>Prosze najechac na ksztalt ponizej</h1>
+    <div class="najechanie_myszka"></div>
+</body>
+</html>
